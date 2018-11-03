@@ -1,0 +1,40 @@
+npm-debug.log*
+lerna-debug.log*
+coverage
+stats.js
+node_modules/
+build/
+yarn-error.log
+
+# Exclude IDE project folders
+.idea
+*.sublime-project
+*.sublime-workspace
+jsconfig.json
+.metadata
+**/.settings
+.classpath
+.project
+
+# OS files
+.DS_STORE
+
+### Gradle ###
+.gradle
+**/build/
+**/bin/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+
+# End of https://www.gitignore.io/api/osx,node,linux,gradle,eclipse,windows,intellij,webstorm,sublimetext,visualstudiocode

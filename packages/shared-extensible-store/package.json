@@ -1,0 +1,19 @@
+{
+  "name": "shared-extensible-store",
+  "private": true,
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "description": "Redux extensible store built on redux-observable.",
+  "main": "src/index.js",
+  "dependencies": {
+    "shared-utils": "0.1.0",
+    "prop-types": "^15.6.2",
+    "ramda": "^0.25.0",
+    "ramda-extension": "^0.4.0",
+    "react": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-observable": "^1.0.0",
+    "rxjs": "^6.2.1"
+  }
+}

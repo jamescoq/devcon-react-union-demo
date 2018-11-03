@@ -1,0 +1,19 @@
+{
+	"name": "shared-utils",
+	"private": true,
+	"version": "0.1.0",
+	"license": "UNLICENSED",
+	"main": "src/index.js",
+	"description": "Common Util functions.",
+	"dependencies": {
+		"fbjs": "^0.8.17",          
+		"invariant": "2.2.4",
+		"prop-types": "^15.6.2",
+		"ramda": "^0.25.0",
+		"ramda-extension": "^0.4.0",
+		"react": "^16.4.1"
+	},
+	"devDependencies": {
+		"enzyme": "^3.3.0"
+	}
+}

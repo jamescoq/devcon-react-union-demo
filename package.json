@@ -1,0 +1,68 @@
+{
+  "name": "react-union-boilerplate-liferay-basic",
+  "version": "0.9.1",
+  "private": true,
+  "license": "MIT",
+  "repository": "https://github.com/lundegaard/react-union",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.0.0",
+    "classnames": "2.2.6",
+    "document-ready": "2.0.1",
+    "prop-types": "15.6.2",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "react-hot-loader": "4.3.11",
+    "react-union": "^0.9.1",
+    "redbox-react": "1.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge",
+    "@babel/core": "^7.1.2",
+    "babel-eslint": "10.0.0",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-preset-react-union": "^0.8.1",
+    "enzyme": "3.6.0",
+    "enzyme-adapter-react-16": "1.6.0",
+    "enzyme-to-json": "3.3.4",
+    "eslint": "5.5.0",
+    "eslint-config-react-union": "^0.8.0",
+    "eslint-plugin-babel": "5.2.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-react": "7.11.1",
+    "husky": "1.1.2",
+    "lint-staged": "7.3.0",
+    "mkdirp": "0.5.1",
+    "prettier": "1.14.3",
+    "react-union-scripts": "^0.9.1",
+    "rimraf": "2.6.2"
+  },
+  "scripts": {
+    "build": "react-union-scripts build --release --target liferay && node ./tools/amdLoaderScripts.js --release",
+    "build:dev": "react-union-scripts build --target liferay && node ./tools/amdLoaderScripts.js",
+    "start": "react-union-scripts start --app app-demo",
+    "start:proxy": "yarn start --proxy --target liferay",
+    "test": "react-union-scripts test",
+    "lint": "yarn lint:eslint",
+    "lint:eslint": "eslint --ext .js ./"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "lint-staged": {
+    "linters": {
+      "**/*.js": [
+        "prettier --write",
+        "yarn lint --fix",
+        "git add"
+      ]
+    }
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}
