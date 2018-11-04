@@ -8,12 +8,17 @@ import rootReducer, { arrive, leave } from '../redux';
 
 import './Root.css';
 
-const Root = ({ arrive, data: { heading, content }, leave }) => (
+const Root = ({ arrive, data: { content, heading }, leave, message }) => (
 	<section>
 		<h1>{heading}</h1>
 		<p>{content}</p>
-		<button onClick={arrive} className="btn-control">I am here</button>
-		<button onClick={leave} className="btn-control">I have to go</button>
+		<p>{`Status: ${message}`}</p>
+		<button onClick={arrive} className="btn-control">
+			I am here
+		</button>
+		<button onClick={leave} className="btn-control">
+			I have to go
+		</button>
 	</section>
 );
 
@@ -24,10 +29,11 @@ Root.propTypes = {
 		content: PropTypes.node,
 	}),
 	leave: PropTypes.func,
+	message: PropTypes.string,
 };
 
 const mapStateToProps = state => ({
-	present: state.control.present,
+	message: state.control.message,
 });
 
 const mapDispatchToProps = { arrive, leave };

@@ -9,24 +9,22 @@ import smile from '../assets/smile.jpg';
 
 import './Root.css';
 
-const Root = ({ message, present }) => (
+const Root = ({ present }) => (
 	<section>
-		<h2>{message}</h2>
 		<img src={present ? smile : cry} className="emotion" />
 	</section>
 );
 
 Root.propTypes = {
-	message: PropTypes.string,
 	present: PropTypes.bool,
 };
 
 const mapStateToProps = state => ({
 	present: state && state.control ? state.control.present : undefined,
-	message: state && state.control ? state.control.message : undefined,
 });
 
 export default compose(
 	withRedux({}),
 	connect(mapStateToProps)
 )(Root);
+
